@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #2874f0;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="tel"],
+    select,
+    input[type="checkbox"] {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .checkbox-group input[type="checkbox"] {
+      width: auto;
+    }
+    .submit-btn {
+      background-color: #2874f0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .submit-btn:hover {
+      background-color: #1e5db3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+      <!-- Name Field -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+      <!-- Course Field -->
+      <label for="course">Course (Select multiple)</label>
+      <select id="course" name="course[]" multiple required>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Electrical Engineering">Electrical Engineering</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Civil Engineering">Civil Engineering</option>
+      </select>
+
+      <!-- Gender Field -->
+      <label for="gender">Gender</label>
+      <input type="radio" id="male" name="gender" value="Male" required> <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female" required> <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="Other" required> <label for="other">Other</label>
+
+      <!-- Country Code and Phone Number Field -->
+      <label for="phone">Phone Number</label>
+      <div style="display: flex;">
+        <select id="country_code" name="country_code" style="width: 30%; margin-right: 10px;" required>
+          <option value="+1">+1 (USA)</option>
+          <option value="+44">+44 (UK)</option>
+          <option value="+91">+91 (India)</option>
+          <option value="+61">+61 (Australia)</option>
+          <!-- Add more country codes as needed -->
+        </select>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter phone number" style="width: 70%;">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+
+</body>
+</html>
